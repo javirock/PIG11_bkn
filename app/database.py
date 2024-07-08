@@ -2,8 +2,6 @@ import os
 import mysql.connector
 from flask import g
 from dotenv import load_dotenv
-d=os.path.dirname(__file__)
-os.chdir(d)
 
 # Cargar variables de entorno desde el archivo .env
 load_dotenv()

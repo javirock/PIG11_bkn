@@ -52,7 +52,7 @@ class Product:
         cursor = db.cursor()
         if self.id_product:
             cursor.execute("""
-                UPDATE products SET product = %s, description = %s, price = %s, img = %s
+                UPDATE products SET product = %s, description = %s, price = %s, image = %s
                 WHERE id_product = %s
             """, (self.product, self.description, self.price, self.image, self.id_product))
         else:

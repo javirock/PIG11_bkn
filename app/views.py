@@ -24,7 +24,7 @@ def create_product():
 def update_product(product_id):
     product = Product.get_by_id(product_id)
     if not product:
-        return jsonify({'message': 'Movie not found'}), 404
+        return jsonify({'message': 'Producto no encontrado'}), 404
     data = request.json
     product.product = data['product']
     product.description = data['description']
@@ -44,4 +44,4 @@ def delete_product(product_id):
     if not product:
         return jsonify({'message': 'Producto no encontrado'}), 404
     product.delete()
-    return jsonify({'message': 'Producto borrado con exito'})
+    return jsonify({'message': 'Producto eliminado con exito'})
